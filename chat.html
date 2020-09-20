@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyDuq0_1noewLcH9e2l3FnZsw6jLcdGU4IY",
+          authDomain: "chat-app-dfffb.firebaseapp.com",
+          databaseURL: "https://chat-app-dfffb.firebaseio.com",
+          projectId: "chat-app-dfffb",
+          storageBucket: "chat-app-dfffb.appspot.com",
+          messagingSenderId: "5785851034",
+          appId: "1:5785851034:web:ec2094bdba2658f13cfb23",
+          measurementId: "G-2MF8GH36WE"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+</head>
+<body>
+    <button class="open-button" onclick="openForm()" >Chat</button>
+
+    <div class="chat-popup" id="myForm">
+      <form onsubmit="return Send()" class="form-container">
+        <h2>Chat</h2>
+    
+        <label for="msg"><b>Message</b></label>
+        <textarea placeholder="Type message.." name="msg"  id="messages" ></textarea>
+    
+        <button type="submit" class="btn">Send</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
